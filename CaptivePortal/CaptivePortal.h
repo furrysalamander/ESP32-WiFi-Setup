@@ -7,7 +7,6 @@
 #include <WebServer.h>
 #include <DNSServer.h>
 #include "FileSystem.h"
-//#include "disp.h"
 namespace WiFiSetup
 {
 const byte DNS_PORT = 53;
@@ -138,7 +137,6 @@ void initCaptivePortal(const char *apSsid = "ESP32", const char *apPsk = "Config
     server.on("/", handleConfigure);
     server.onNotFound(handleConfigure);
     server.begin();
-    //disp::displayCaptivePortal(apSsid, apPsk);
 }
 
 // Closes the web and DNS server.
